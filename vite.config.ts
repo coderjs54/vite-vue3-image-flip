@@ -6,5 +6,20 @@ export default defineConfig({
   plugins: [vue()],
   server: {
     port: 5175
+  },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: (id) => {
+          if (id.includes('@zip.js/zip.js')) {
+            return 'zip-library'
+          }
+          if (id.includes('node_modules/vue')) {
+            return 'vue'
+          }
+          return undefined
+        }
+      }
+    }
   }
 })

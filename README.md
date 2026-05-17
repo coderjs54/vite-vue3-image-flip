@@ -1,5 +1,69 @@
-# Vue 3 + TypeScript + Vite
+# 图片翻转工具
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+一个简单易用的纯前端图片翻转工具，支持批量上传、批量翻转和批量下载。
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+## 功能特性
+
+- 📷 **批量上传**：支持一次性选择多张图片
+- 🔄 **批量翻转**：支持沿 X 轴或 Y 轴翻转所有图片
+- 📦 **打包下载**：翻转后的图片自动打包成 ZIP 文件下载
+- 📥 **单张下载**：也可以单独下载每张翻转后的图片
+- 🎨 **简洁界面**：简洁直观的界面，易于使用
+
+## 技术栈
+
+- **Vue 3** - 前端框架
+- **Vite** - 构建工具
+- **TypeScript** - 类型安全
+- **@zip.js/zip.js** - ZIP 压缩库
+- **SCSS** - 样式预处理
+
+## 安装和使用
+
+### 安装依赖
+
+```bash
+npm install
+```
+
+### 启动开发服务器
+
+```bash
+npm run dev
+```
+
+### 构建生产版本
+
+```bash
+npm run build
+```
+
+### 预览生产版本
+
+```bash
+npm run preview
+```
+
+## 使用说明
+
+1. **上传图片**：点击「上传图片（可多选）」按钮，选择一张或多张图片
+2. **选择翻转方式**：点击「批量 FlipX」或「批量 FlipY」进行翻转
+3. **下载结果**：点击「批量下载翻转图片」将所有翻转后的图片打包下载
+
+## 项目结构
+
+```
+.
+├── src/
+│   ├── App.vue          # 主组件
+│   └── utils/
+│       └── index.ts     # 图片处理工具函数
+├── index.html
+├── package.json
+├── tsconfig.json
+└── vite.config.ts
+```
+
+## 许可证
+
+MIT
